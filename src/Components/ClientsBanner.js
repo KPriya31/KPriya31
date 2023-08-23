@@ -1,5 +1,5 @@
 import React from "react";
-import ClientsImg from "../images/ClientsImg (1).png";
+import ClientsImg from "../images/ClientsImg (1).webp";
 import Box from "@mui/material/Box";
 function ClientsBanner() {
   return (
