@@ -8,6 +8,7 @@ import HowItWorks from "./Components/HowItWorks.js";
 import Pricing from "./Components/Pricing";
 import Faq from "./Components/Faq";
 import About from './Components/About';
+import Register from './Components/Register';
 import { RequireToken } from './Auth';
 
 function App() {
@@ -28,6 +29,7 @@ function App() {
         <Route path="/pricing" element={<Pricing/>}></Route>
         <Route path="/faqs" element={<Faq/>}></Route>
         <Route path="/about" element={<About/>}></Route>
+        <Route path="/register" element={<Register/>}></Route>
       </Routes>
     </div>
    /* <AppBar position="static">

@@ -8,23 +8,14 @@ import MainBanner from "./MainBanner";
 import ClientsBanner from "./ClientsBanner";
 import Footer from "./Footer.js";
 
-
 function Home() {
   return (
-    <AppBar position="relative">
-      <div>
-        <Header></Header>
-      </div>
-      <div>
-        <MainBanner></MainBanner>
-      </div>
-      <div>
-        <ClientsBanner></ClientsBanner>
-      </div>
-      <div>
-        <Footer></Footer>
-      </div>
-    </AppBar>
+    <div>
+      <Header></Header>
+      <MainBanner></MainBanner>
+      <ClientsBanner></ClientsBanner>
+      <Footer></Footer>
+    </div>
   );
 }
 

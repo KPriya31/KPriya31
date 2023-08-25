@@ -1,8 +1,9 @@
 import React from "react";
 import Link  from "@mui/material/Link";
+import AppBar from '@mui/material/AppBar';
 import Typography from "@mui/material/Typography";
 import MenuItem from "@mui/material/MenuItem";
-import Box from "@mui/material/Box";
+import Toolbar from '@mui/material/Toolbar'; 
 import Button from "@mui/material/Button";
 import logo from "../images/EZR_Blue.png";
 
@@ -16,12 +17,9 @@ import logo from "../images/EZR_Blue.png";
 const pages = ["How it works", "Pricing", "FAQs", "Contact Us", "About"];
 
 function Header (){
-    const [anchorElNav, setAnchorElNav] = React.useState(null);
-  const handleCloseNavMenu = () => {
-    setAnchorElNav(null);
-  };
+   
     return(
-<Box
+/*<Box
         sx={{
           backgroundColor: "white",
           display: { xs: "flex" },
@@ -30,8 +28,15 @@ function Header (){
           padding:1
           
         }}
+      > */
+      <AppBar
+        position="static"
+        color="default"
+        elevation={0}
+        sx={{ borderBottom: (theme) => `1px solid ${theme.palette.divider}` }}
       >
-        <Link href="/">
+      <Toolbar sx={{ backgroundColor: "white", flexWrap: 'nowrap' }}>
+                <Link href="/" noWrap sx={{ flexGrow: 1 }}>
         <img src={logo} className="App-logo" alt="logo" />
         </Link>
         <Link href="/how-it-works" style={{textDecoration : "none"}}>
@@ -79,7 +84,8 @@ function Header (){
         </Typography>
         </Button></Link>
        
-      </Box>
+      </Toolbar>
+      </AppBar>
     );
 }
 

@@ -4,6 +4,7 @@ import Box from "@mui/material/Box";
 import { Typography } from "@mui/material";
 import TextField from "@mui/material/TextField";
 import Button from "@mui/material/Button";
+import Link from '@mui/material/Link';
 
 function MainBanner() {
   return (
@@ -32,7 +33,7 @@ function MainBanner() {
                 
               }} 
         />
-        
+        <Link href="/register" style={{textDecoration : "none"}}>
         <Button sx={{ 
           backgroundColor: "#0698d2" , 
           width:"200px", 
@@ -46,7 +47,7 @@ function MainBanner() {
           <Typography color="#ffffff" textAlign="center">
             Start for Free
           </Typography>
-        </Button>
+        </Button></Link>
         <Typography color="#006400" fontSize="15px">Free forever (upto n packages / month)</Typography>
         <Typography color="#006400" fontSize="30px" alignItems="center">Never worry about late shipments
 again with EZRefunds

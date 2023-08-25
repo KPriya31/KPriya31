@@ -1,6 +1,7 @@
 import  React, { useState } from 'react';
 import Header from './Header';
 import Footer from './Footer';
+import Avatar from '@mui/material/Avatar';
 import Container from "@mui/material/Container";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
@@ -10,11 +11,29 @@ import FormControlLabel from "@mui/material/FormControlLabel";
 import Grid from "@mui/material/Grid";
 import Link from "@mui/material/Link";
 import Checkbox from "@mui/material/Checkbox";
+import LockOutlinedIcon from "@mui/icons-material/LockPersonOutlined";
+//import LockOutlinedIcon from '@material-ui/icons/LockOpenOutlined';
 import { useNavigate } from "react-router";
 import { fetchToken , setToken } from "../Auth.js";
 import axios from 'axios';
 
-
+function Copyright(props) {
+  return (
+    <Typography
+      variant="body2"
+      color="text.secondary"
+      align="center"
+      {...props}
+    >
+      {"Copyright © "}
+      <Link color="inherit" href="/">
+        EZRefund
+      </Link>{" "}
+      {new Date().getFullYear()}
+      {"."}
+    </Typography>
+  );
+}
 /*function Login()
 {
  return(
@@ -76,6 +95,9 @@ export default function Login() {
           alignItems: "center",
         }}
       >
+         <Avatar sx={{ m: 1, bgcolor: "secondary.main" }}>
+            <LockOutlinedIcon />
+          </Avatar>
        <Typography component="h1" variant="h5">
           Sign in
         </Typography>
@@ -105,7 +127,7 @@ export default function Login() {
             type="password"
             id="password"
             autoComplete="current-password"
-            type="text"
+            
                   onChange={(e) => setPassword(e.target.value)}
           />
            <FormControlLabel
@@ -133,14 +155,14 @@ export default function Login() {
               </Link>
             </Grid>
             <Grid item>
-              <Link href="#" variant="body2">
+              <Link href="/register" variant="body2">
                 {"Don't have an account? Sign Up"}
               </Link>
             </Grid>
           </Grid>
       </Box>
       </Container>
-      
+      <Copyright sx={{ mt: 5 }} />
     </>
     
   );
